@@ -27,20 +27,34 @@ void BubbleSort(T arr[], int size)
 		}
 	}
 
-	std::cout << "Sorted array is\n";
+	std::cout << "\nSorted array is\n";
 	for (int k = 0; k < size; k++)
 	{
-		std::cout << arr[k] << " ,";
+		std::cout << arr[k] << ",";
 	}
 }
 
 // Main Function
 int main()
 {
-    std::cout << "Integer Array\n";
+    std::cout << "Original Integer Array\n";
 	int intArray[] = {4, 11, 6, -7, 88, 41, 37};
-
 	int noOfElements = sizeof(intArray) / sizeof(intArray[0]);
+	for (int i = 0; i < noOfElements; i++)
+	{
+		std::cout << intArray[i] << " ,";
+	}
 
 	BubbleSort(intArray, noOfElements);
+
+
+	std::cout << "\n\nOriginal Float Array\n";
+	float floatArray[] = { 4.7f, -1.2f, 6.9f, -7.0f, 6.9f, 14.1f, -37.6f };
+	noOfElements = sizeof(floatArray) / sizeof(floatArray[0]);
+	for (int i = 0; i < noOfElements; i++)
+	{
+		std::cout << floatArray[i] << " ,";
+	}
+
+	BubbleSort(floatArray, noOfElements);
 }
